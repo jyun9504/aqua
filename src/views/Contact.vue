@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="contact">
     <Header />
-    Home
+    contact
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 import Header from '@/layouts/Header.vue'
 
 export default {
-  name: 'Home',
+  name: 'Contact',
   components: {
     Header,
   }
