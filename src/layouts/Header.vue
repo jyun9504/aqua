@@ -30,7 +30,7 @@ export default {
     .header {
         background: url('../assets/images/wave-ocean.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
         height: 100vh;
         text-align: left;
         animation: fadeIn 1s linear;
@@ -51,15 +51,16 @@ export default {
 
     .heading-primary {
         color: #383838;
-        padding: 9rem 0 0 12rem;
         animation: fadeInFromRight .8s linear;
         transition: all 2s;
+        margin: 10rem 0 10rem 10rem;
 
         &--main {
             font-size: 3rem;
             font-weight: 100;
             letter-spacing: .1rem;
             line-height: 4rem;
+            
         }
 
         &--sub {
@@ -70,25 +71,47 @@ export default {
 
     .heading-secondary {
         color: #383838;
-        padding: 10rem 0 0 15rem;
-        width: 50rem;
         animation: fadeInFromRight 1.2s linear;
         transition: all 2s;
-
+        margin: 5rem 0 0 15rem;
+        display: inline-block;
+        padding: 1rem;
+        background-color: #A6D7DE;
+        
         &--main {
             font-weight: 400;
             font-size: 1.5rem;
         }
     }
 
-    @include lessThan(960px){
+    @include lessThan(960px) {
         .heading-secondary {
-            position: absolute;
-            transform: translate(20px, 20px);
+           transform: translate(-6rem,-10rem);
         }
 
         .heading-primary {
-            transform: translate(50px, 50px);
+            margin-top: 2rem;
+        }
+    }
+
+    @include lessThan(540px) {
+        .heading-secondary {
+            padding: 1rem;
+        }
+
+        .heading-primary {
+            text-align: center;
+            margin: 10rem auto;
+            padding: 1rem;
+            
+            &--main {
+                font-size: 4rem;
+            }
+
+            &--sub {
+                margin-top: 2rem;
+                font-size: 2rem;
+            }
         }
     }
 </style>
