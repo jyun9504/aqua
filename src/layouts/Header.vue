@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <a href="#" class="logo"><h1 class="logo__name">A qua</h1></a>
+    <NavSP />
     <div class="heading-primary">
         <h1 class="heading-primary--main">High Quality Ocean Water</h1>
         <h1 class="heading-primary--main">& Clean Air</h1>
@@ -16,12 +17,13 @@
 <script>
 // @ is an alias to /src
 import NavBar from '@/components/NavBar.vue'
+import NavSP from '@/components/NavSP.vue'
 
 export default {
   name: 'Home',
   components: {
     NavBar,
-    
+    NavSP    
   }
 }
 </script>
@@ -30,6 +32,7 @@ export default {
     .header {
         background: url('../assets/images/wave-ocean.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: bottom;
         height: 100vh;
         text-align: left;
@@ -46,6 +49,7 @@ export default {
         &__name {
             text-transform: uppercase;
             font-size: 2rem;
+           
         }
     }
 
@@ -60,7 +64,6 @@ export default {
             font-weight: 100;
             letter-spacing: .1rem;
             line-height: 4rem;
-            
         }
 
         &--sub {
@@ -79,33 +82,34 @@ export default {
         background-color: #A6D7DE;
         
         &--main {
-            font-weight: 400;
+            font-weight: 2rem;
             font-size: 1.5rem;
         }
     }
 
     @include lessThan(960px) {
-        .heading-secondary {
-           transform: translate(-6rem,-10rem);
-        }
-
         .heading-primary {
             margin-top: 2rem;
+        }
+        .heading-secondary {
+            position: relative;
+            top: -12rem;
         }
     }
 
     @include lessThan(540px) {
-        .heading-secondary {
-            padding: 1rem;
+        .header {
+            background-size: 400%;
         }
 
         .heading-primary {
             text-align: center;
-            margin: 10rem auto;
             padding: 1rem;
+            margin: 10rem auto;
             
             &--main {
-                font-size: 4rem;
+                font-size: 3rem;
+                line-height: 3.5rem;
             }
 
             &--sub {
@@ -113,5 +117,10 @@ export default {
                 font-size: 2rem;
             }
         }
+
+        .heading-secondary {
+            animation: fadeOut 1s;
+            opacity: 0;
+        } 
     }
 </style>

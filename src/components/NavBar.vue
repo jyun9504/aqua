@@ -29,12 +29,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+    
     .navbar {
         text-align: right;
         transition: all 1s;
-        
 
         a {
+            letter-spacing: .4rem;
             font-size: 2rem;
             font-weight: bold;
             color: #2c3e50;
@@ -46,8 +47,8 @@ export default {
                 content: '';
                 width: 100%;
                 height: 100%;
-                top: -10px;
-                left: 2px;
+                top: .8rem;
+                left: -1.5rem;
                 position: absolute;
                 background:  url(../assets/images/active-icon.svg);  
                 background-repeat: no-repeat;
