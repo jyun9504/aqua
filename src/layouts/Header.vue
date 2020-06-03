@@ -67,6 +67,7 @@ export default {
         }
 
         &--sub {
+            margin-top: 1rem;
             font-weight: 400;
             font-size: 1.5rem;
         }

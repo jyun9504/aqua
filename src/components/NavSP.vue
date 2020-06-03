@@ -48,13 +48,13 @@ export default {
         top: 4.7rem;
         right: 5rem;
         height: 2.5rem;
-        width: 2.5rem;
+        width: 3rem;
         z-index: 99;
 
         & span {
             position: absolute;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background-color: #20797B;
             transition: all .5s;
         }
