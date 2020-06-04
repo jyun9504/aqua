@@ -104,13 +104,13 @@ export default {
 
     @include lessThan(540px) {
         .header {
-            background-size: 400%;
+            background-size: 500%;
         }
 
         .heading-primary {
             padding: 4rem;
             margin: 5rem auto 10rem 0;
-            
+            background-color: rgba(255, 255, 255, 0.8);
             &--main {
                 font-size: 2.5rem;
                 line-height: 3rem;
