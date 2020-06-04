@@ -1,18 +1,18 @@
 <template>
   <div class="about">
-    <Header />
+    <SubHeader />
     about
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/layouts/Header.vue'
+import SubHeader from '@/layouts/SubHeader.vue'
 
 export default {
   name: 'About',
   components: {
-    Header,
+    SubHeader,
   }
 }
 </script>

@@ -1,18 +1,23 @@
 <template>
-  <div class="contact">
-    <Header />
-    contact
-  </div>
+	<div class="contact">
+		<SubHeader />
+		contact
+	</div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/layouts/Header.vue'
+import SubHeader from '@/layouts/SubHeader.vue'
 
 export default {
   name: 'Contact',
   components: {
-    Header,
+    SubHeader
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+    
+</style>

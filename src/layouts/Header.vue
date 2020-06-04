@@ -1,29 +1,34 @@
 <template>
   <header class="header">
-    <a href="#" class="logo"><h1 class="logo__name">A qua</h1></a>
+    <Logo />
     <NavSP />
     <div class="heading-primary">
         <h1 class="heading-primary--main">High Quality Ocean Water</h1>
         <h1 class="heading-primary--main">& Clean Air</h1>
         <h2 class="heading-primary--sub">優質海洋水 ＆ 乾淨空氣</h2>
     </div>
-    <NavBar />
+    <NavBar class="navbar" />
     <div class="heading-secondary">
         <h3 class="heading-secondary--main">乾淨又衛生高級海洋水，鹹得很，殺菌，喝了沒病。</h3>
     </div>
+    <ScrollDownSign class="scrolldown-sign" />
   </header>
 </template>
 
 <script>
 // @ is an alias to /src
+import Logo from '@/components/Logo.vue'
 import NavBar from '@/components/NavBar.vue'
 import NavSP from '@/components/NavSP.vue'
+import ScrollDownSign from '@/components/ScrollDownSign.vue'
 
 export default {
   name: 'Home',
   components: {
+    Logo,
     NavBar,
-    NavSP    
+    NavSP,
+    ScrollDownSign
   }
 }
 </script>
@@ -35,27 +40,16 @@ export default {
         background-repeat: no-repeat;
         background-position: bottom;
         height: 100vh;
-        text-align: left;
-        animation: fadeIn 1s linear;
+        animation: fadeInS 1s linear;
     }
 
     .logo {
-        display: inline-block;
-        text-decoration: none;
-        color: #02696C;
         margin: 4.2rem;
-        animation: fadeIn .8s linear;
-
-        &__name {
-            text-transform: uppercase;
-            font-size: 2rem;
-           
-        }
     }
 
     .heading-primary {
         color: #383838;
-        animation: fadeInFromRight .8s linear;
+        animation: fadeInFromRight 1.2s linear;
         transition: all 2s;
         margin: 10rem 0 10rem 10rem;
 
@@ -75,17 +69,27 @@ export default {
 
     .heading-secondary {
         color: #383838;
-        animation: fadeInFromRight 1.2s linear;
+        animation: fadeInFromRight 1.5s linear;
         transition: all 2s;
         margin: 5rem 0 0 15rem;
         display: inline-block;
         padding: 1rem;
-        background-color: #A6D7DE;
+        background-color: rgba(255, 255, 255, 0.5);
         
         &--main {
             font-weight: 2rem;
             font-size: 1.5rem;
         }
+    }
+
+    .navbar {
+        text-align: right;
+    }
+
+    .scrolldown-sign {
+        position: absolute;
+        right: 4rem;
+        bottom: 2rem;
     }
 
     @include lessThan(960px) {
@@ -104,24 +108,23 @@ export default {
         }
 
         .heading-primary {
-            text-align: center;
-            padding: 1rem;
-            margin: 10rem auto;
+            padding: 4rem;
+            margin: 5rem auto 10rem 0;
             
             &--main {
-                font-size: 3rem;
-                line-height: 3.5rem;
+                font-size: 2.5rem;
+                line-height: 3rem;
             }
 
             &--sub {
                 margin-top: 2rem;
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
 
         .heading-secondary {
             animation: fadeOut 1s;
             opacity: 0;
-        } 
+        }
     }
 </style>

@@ -31,13 +31,13 @@ export default {
 <style scoped lang="scss">
     
     .navbar {
-        text-align: right;
         transition: all 1s;
+        animation: fadeInFromRight 1s linear;
 
         a {
             letter-spacing: .4rem;
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 1.8rem;
+            font-weight: 400;
             color: #2c3e50;
             text-decoration: none;
             margin: 0 5rem;
@@ -47,12 +47,12 @@ export default {
                 content: '';
                 width: 100%;
                 height: 100%;
-                top: .8rem;
+                top: .7rem;
                 left: -1.5rem;
                 position: absolute;
                 background:  url(../assets/images/active-icon.svg);  
                 background-repeat: no-repeat;
-                animation: fadeInFromTop .5s linear;
+                animation: fadeInFromTop .5s linear 1s both;
                 visibility: hidden;
             }
 
@@ -72,9 +72,10 @@ export default {
         position: absolute;
     }
 
-    @include lessThan(960px){
-        .navbar {
-            display: none;
-        }
+    @include lessThan(960px) {
+       .navbar{
+           display: none;
+       }
     }
+
 </style>
